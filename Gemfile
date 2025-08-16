@@ -4,17 +4,17 @@ ruby '2.7.1'
 
 ##-- base gems for rails --##
 gem 'rack-cors', require: 'rack/cors'
-gem 'rails'
+gem 'rails', '>= 7.1.5.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
 ##-- rails application helper gems --##
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', '>= 10.0.0'
 gem 'attr_extras'
 gem 'browser'
 gem 'hashie'
 gem 'jbuilder'
-gem 'kaminari'
+gem 'kaminari', '>= 1.2.2'
 gem 'responders'
 gem 'rest-client'
 gem 'telephone_number'
@@ -53,12 +53,12 @@ gem 'barnes'
 
 ##--- gems for authentication & authorization ---##
 gem 'devise'
-gem 'devise_token_auth'
+gem 'devise_token_auth', '>= 1.2.3'
 # authorization
 gem 'jwt'
 gem 'pundit'
 # super admin
-gem 'administrate'
+gem 'administrate', '>= 0.15.0'
 
 ##--- gems for pubsub service ---##
 # https://karolgalanciak.com/blog/2019/11/30/from-activerecord-callbacks-to-publish-slash-subscribe-pattern-and-event-driven-design/
@@ -97,7 +97,7 @@ gem 'geocoder'
 gem 'maxminddb'
 
 group :development do
-  gem 'annotate'
+  gem 'annotate', '>= 3.2.0'
   gem 'bullet'
   gem 'letter_opener'
   gem 'web-console'
