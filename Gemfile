@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 ruby '2.7.1'
 
 ##-- base gems for rails --##
-gem 'rack-cors', require: 'rack/cors'
-gem 'rails'
+gem 'rack-cors', '>= 2.0.0', require: 'rack/cors'
+gem 'rails', '>= 6.0.3.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
@@ -15,7 +15,7 @@ gem 'browser'
 gem 'hashie'
 gem 'jbuilder'
 gem 'kaminari'
-gem 'responders'
+gem 'responders', '>= 3.1.0'
 gem 'rest-client'
 gem 'telephone_number'
 gem 'time_diff'
@@ -44,21 +44,21 @@ gem 'redis-namespace'
 gem 'redis-rack-cache'
 
 ##--- gems for server & infra configuration ---##
-gem 'dotenv-rails'
+gem 'dotenv-rails', '>= 2.8.0'
 gem 'foreman'
 gem 'puma'
-gem 'webpacker', '~> 5.x'
+gem 'webpacker', '~> 5.2', '>= 5.2.2'
 # metrics on heroku
 gem 'barnes'
 
 ##--- gems for authentication & authorization ---##
-gem 'devise'
-gem 'devise_token_auth'
+gem 'devise', '>= 4.7.3'
+gem 'devise_token_auth', '>= 1.1.5'
 # authorization
 gem 'jwt'
 gem 'pundit'
 # super admin
-gem 'administrate'
+gem 'administrate', '>= 0.15.0'
 
 ##--- gems for pubsub service ---##
 # https://karolgalanciak.com/blog/2019/11/30/from-activerecord-callbacks-to-publish-slash-subscribe-pattern-and-event-driven-design/
@@ -66,7 +66,7 @@ gem 'wisper', '2.0.0'
 
 ##--- gems for channels ---##
 # TODO: bump up gem to 2.0
-gem 'facebook-messenger', '1.5.0'
+gem 'facebook-messenger', '2.0.0'
 gem 'telegram-bot-ruby'
 gem 'twilio-ruby', '~> 5.32.0'
 # twitty will handle subscription of twitter account events
@@ -84,7 +84,7 @@ gem 'scout_apm'
 gem 'sentry-raven'
 
 ##-- background job processing --##
-gem 'sidekiq'
+gem 'sidekiq', '>= 6.1.2'
 
 ##-- Push notification service --##
 gem 'fcm'
@@ -100,7 +100,7 @@ group :development do
   gem 'annotate'
   gem 'bullet'
   gem 'letter_opener'
-  gem 'web-console'
+  gem 'web-console', '>= 4.1.0'
 
   # used in swagger build
   gem 'json_refs', git: 'https://github.com/tzmfreedom/json_refs', ref: 'e32deb0'
@@ -111,7 +111,7 @@ end
 
 group :test do
   # Cypress in rails.
-  gem 'cypress-on-rails', '~> 1.0'
+  gem 'cypress-on-rails', '~> 1.8', '>= 1.8.1'
   # fast cleaning of database
   gem 'database_cleaner'
 end
@@ -121,15 +121,15 @@ group :development, :test do
   gem 'action-cable-testing'
   gem 'bundle-audit', require: false
   gem 'byebug', platform: :mri
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '>= 6.2.0'
   gem 'faker'
   gem 'listen'
   gem 'mock_redis', git: 'https://github.com/sds/mock_redis', ref: '16d00789f0341a3aac35126c0ffe97a596753ff9'
   gem 'pry-rails'
-  gem 'rspec-rails', '~> 4.0.0.beta2'
+  gem 'rspec-rails', '~> 4.0.2.0'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
+  gem 'rubocop-rails', '>= 2.8.0', require: false
   gem 'rubocop-rspec', require: false
   gem 'scss_lint', require: false
   gem 'seed_dump'
