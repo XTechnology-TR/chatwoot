@@ -127,10 +127,10 @@ group :development, :test do
   gem 'mock_redis', git: 'https://github.com/sds/mock_redis', ref: '16d00789f0341a3aac35126c0ffe97a596753ff9'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 4.0.0.beta2'
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop', '>= 1.66.0', require: false
+  gem 'rubocop-performance', '>= 1.8.0', require: false
+  gem 'rubocop-rails', '>= 2.8.0', require: false
+  gem 'rubocop-rspec', '>= 2.0.0', require: false
   gem 'scss_lint', require: false
   gem 'seed_dump'
   gem 'shoulda-matchers'
