@@ -119,7 +119,7 @@ end
 group :development, :test do
   # locking until https://github.com/codeclimate/test-reporter/issues/418 is resolved
   gem 'action-cable-testing'
-  gem 'bundle-audit', require: false
+  gem 'bundle-audit', '>= 0.2.0', require: false
   gem 'byebug', platform: :mri
   gem 'factory_bot_rails'
   gem 'faker'
@@ -132,7 +132,7 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
   gem 'scss_lint', require: false
-  gem 'seed_dump'
+  gem 'seed_dump', '>= 3.4.0'
   gem 'shoulda-matchers'
   gem 'simplecov', '0.17.1', require: false
   gem 'spring'
