@@ -31,7 +31,7 @@ gem 'haikunator'
 gem 'liquid'
 
 ##-- for active storage --##
-gem 'aws-sdk-s3', require: false
+gem 'aws-sdk-s3', '>= 1.208.0', require: false
 gem 'azure-storage-blob', require: false
 gem 'google-cloud-storage', require: false
 gem 'mini_magick'
