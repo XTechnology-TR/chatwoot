@@ -33,7 +33,7 @@ gem 'liquid'
 ##-- for active storage --##
 gem 'aws-sdk-s3', require: false
 gem 'azure-storage-blob', require: false
-gem 'google-cloud-storage', require: false
+gem 'google-cloud-storage', '>= 1.32.0', require: false
 gem 'mini_magick'
 
 ##-- gems for database --#
@@ -67,27 +67,27 @@ gem 'wisper', '2.0.0'
 ##--- gems for channels ---##
 # TODO: bump up gem to 2.0
 gem 'facebook-messenger', '1.5.0'
-gem 'telegram-bot-ruby'
-gem 'twilio-ruby', '~> 5.32.0'
+gem 'telegram-bot-ruby', '>= 0.13.0'
+gem 'twilio-ruby', '~> 5.67.0'
 # twitty will handle subscription of twitter account events
 # gem 'twitty', git: 'https://github.com/chatwoot/twitty'
 gem 'twitty'
 # facebook client
-gem 'koala'
+gem 'koala', '>= 3.3.0'
 # slack client
-gem 'slack-ruby-client'
+gem 'slack-ruby-client', '>= 1.1.0'
 
 ##--- gems for debugging and error reporting ---##
 # static analysis
 gem 'brakeman'
 gem 'scout_apm'
-gem 'sentry-raven'
+gem 'sentry-raven', '>= 3.0.4'
 
 ##-- background job processing --##
 gem 'sidekiq'
 
 ##-- Push notification service --##
-gem 'fcm'
+gem 'fcm', '>= 1.0.8'
 gem 'webpush'
 
 ##-- geocoding / parse location from ip --##
